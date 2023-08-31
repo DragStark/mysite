@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import environ
+import os
 
 env = environ.Env()
 environ.Env.read_env()
@@ -134,4 +135,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOCALE_PATHS = (BASE_DIR + 'locale/', )
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),  # Adjust this path if necessary
+]
