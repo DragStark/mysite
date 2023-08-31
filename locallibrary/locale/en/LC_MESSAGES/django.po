@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-31 09:40+0700\n"
+"POT-Creation-Date: 2023-08-31 15:44+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,39 +74,39 @@ msgstr "of"
 msgid "next"
 msgstr "next"
 
-#: .\catalog\templates\catalog\book_detail.html:3
+#: .\catalog\templates\catalog\book_detail.html:4
 #, fuzzy
 #| msgid "Authors:"
 msgid "Author:"
 msgstr "Authors:"
 
-#: .\catalog\templates\catalog\book_detail.html:5
+#: .\catalog\templates\catalog\book_detail.html:6
 msgid "Summary:"
 msgstr "Summary"
 
-#: .\catalog\templates\catalog\book_detail.html:6
+#: .\catalog\templates\catalog\book_detail.html:7
 msgid "ISBN:"
 msgstr "ISBN"
 
-#: .\catalog\templates\catalog\book_detail.html:7
+#: .\catalog\templates\catalog\book_detail.html:8
 msgid "Language:"
 msgstr "Language"
 
-#: .\catalog\templates\catalog\book_detail.html:8
+#: .\catalog\templates\catalog\book_detail.html:9
 msgid "Genre:"
 msgstr "Genre"
 
-#: .\catalog\templates\catalog\book_detail.html:10
+#: .\catalog\templates\catalog\book_detail.html:11
 #, fuzzy
 #| msgid "Copies:"
 msgid "Copies"
 msgstr "Copies:"
 
-#: .\catalog\templates\catalog\book_detail.html:19
+#: .\catalog\templates\catalog\book_detail.html:20
 msgid "Due to be returned:"
 msgstr "Due to be returned:"
 
-#: .\catalog\templates\catalog\book_detail.html:21
+#: .\catalog\templates\catalog\book_detail.html:22
 msgid "Imprint:"
 msgstr "Imprint:"
 
@@ -149,3 +149,15 @@ msgstr "Copies available:"
 #: .\catalog\templates\index.html:12
 msgid "Authors:"
 msgstr "Authors:"
+
+#: .\catalog\templates\index.html:14
+msgid "You have visited this page"
+msgstr "You have visited this page"
+
+#: .\catalog\templates\index.html:14
+msgid "time"
+msgstr "time"
+
+#: .\catalog\templates\index.html:14
+msgid "s"
+msgstr ""
