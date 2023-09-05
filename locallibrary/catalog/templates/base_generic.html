@@ -19,10 +19,36 @@
   </head>
   <body>
     <div class="container-fluid">
+      {% get_current_language as LANGUAGE_CODE %} 
+      {% get_available_languages as LANGUAGES %} 
+      {% get_language_info_list for LANGUAGES as languages %}
       <div class="row">
         <div class="col-sm-2">
           {% block sidebar %}
           <ul class="sidebar-nav">
+            <li>
+              {% for language in languages %}
+              <form
+                action="{% url 'set_language' %}"
+                method="post"
+                style="display: inline"
+              >
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ redirect_to }}" />
+                <input
+                  type="hidden"
+                  name="language"
+                  value="{{ language.code }}"
+                />
+                <input
+                  type="image"
+                  src="{{ '/static/images/flags/'|add:language.code|add:'.png' }}"
+                  class="flag-lang"
+                  alt="{{ language.name_local }}"
+                />
+              </form>
+              {% endfor %}
+            </li>
             <li>
               <a href="{% url 'index' %}">{% trans 'Home' %}</a>
             </li>
@@ -32,6 +58,26 @@
             <li>
               <a href="">{% trans 'All authors' %}</a>
             </li>
+            {% if user.is_authenticated %}
+            <div class="user-side-navbar">
+              <hr/>
+              <li>{% trans 'User:'%} {{ user.get_username }}</li>
+              <li>
+                <a href="{% url 'my-borrowed' %}">{% trans 'My Borrowed'%}</a>
+              </li>
+              <li>
+                <a href="{% url 'logout'%}?next={{request.path}}"
+                  >{% trans 'Logout'%}</a
+                >
+              </li>
+              {% else %}
+              <li>
+                <a href="{% url 'login'%}?next={{request.path}}"
+                  >{% trans 'Login'%}</a
+                >
+              </li>
+            </div>
+            {% endif %}
           </ul>
           {% endblock %}
         </div>
@@ -43,8 +89,8 @@
                 href="{{ request.path }}?page={{ page_obj.previous_page_number}}"
                 >{% trans 'previous' %}</a
               >{% endif %}<span class="page-current"
-                >{% trans 'Page' %} {{ page_obj.number }} {% trans 'of' %} {{ page_obj.paginator.num_pages
-                }}.</span
+                >{% trans 'Page' %} {{ page_obj.number }} {% trans 'of' %} {{
+                page_obj.paginator.num_pages }}.</span
               >{% if page_obj.has_next %}<a
                 href="{{ request.path }}?page={{ page_obj.next_page_number }}"
                 >{% trans 'next' %}</a

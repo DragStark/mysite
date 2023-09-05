@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-31 15:44+0700\n"
+"POT-Creation-Date: 2023-09-05 15:13+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\catalog\models.py:9
+#: .\catalog\models.py:13
 msgid "Enter a book genre (e.g. Science Fiction)"
 msgstr "Enter a book genre (e.g. Science Fiction)"
 
-#: .\catalog\models.py:21
+#: .\catalog\models.py:25
 msgid "Enter a brief description of the book"
 msgstr "Enter a brief description of the book"
 
-#: .\catalog\models.py:22
+#: .\catalog\models.py:26
 msgid ""
 "13 Characters <a href=\"https://www.isbn-international.org/content/what-isbn"
 "\">ISBN number</a>"
@@ -34,43 +34,63 @@ msgstr ""
 "13 Characters <a href=\"https://www.isbn-international.org/content/what-isbn"
 "\">ISBN number</a>"
 
-#: .\catalog\models.py:24
+#: .\catalog\models.py:28
 msgid "Select a genre for this book"
 msgstr "Select a genre for this book"
 
-#: .\catalog\models.py:43
+#: .\catalog\models.py:47
 msgid "Unique ID for this particular bookacross whole library"
 msgstr "Unique ID for this particular bookacross whole library"
+
+#: .\catalog\models.py:63
+msgid "Book availability"
+msgstr "Book availability"
 
 #: .\catalog\templates\base_generic.html:6
 msgid "Local Library"
 msgstr "Local Library"
 
-#: .\catalog\templates\base_generic.html:27
+#: .\catalog\templates\base_generic.html:59
 msgid "Home"
 msgstr "Home"
 
-#: .\catalog\templates\base_generic.html:30
+#: .\catalog\templates\base_generic.html:62
 msgid "All books"
 msgstr "All books"
 
-#: .\catalog\templates\base_generic.html:33
+#: .\catalog\templates\base_generic.html:65
 msgid "All authors"
 msgstr "All authors"
 
-#: .\catalog\templates\base_generic.html:44
+#: .\catalog\templates\base_generic.html:68
+msgid "User:"
+msgstr "User:"
+
+#: .\catalog\templates\base_generic.html:70
+msgid "My Borrowed"
+msgstr "My Borrowed"
+
+#: .\catalog\templates\base_generic.html:74
+msgid "Logout"
+msgstr "Logout"
+
+#: .\catalog\templates\base_generic.html:80
+msgid "Login"
+msgstr "Login"
+
+#: .\catalog\templates\base_generic.html:93
 msgid "previous"
 msgstr "previous"
 
-#: .\catalog\templates\base_generic.html:46
+#: .\catalog\templates\base_generic.html:95
 msgid "Page"
 msgstr "Page"
 
-#: .\catalog\templates\base_generic.html:46
+#: .\catalog\templates\base_generic.html:95
 msgid "of"
 msgstr "of"
 
-#: .\catalog\templates\base_generic.html:50
+#: .\catalog\templates\base_generic.html:99
 msgid "next"
 msgstr "next"
 
@@ -110,8 +130,20 @@ msgstr "Due to be returned:"
 msgid "Imprint:"
 msgstr "Imprint:"
 
-#: .\catalog\templates\catalog\book_list.html:12
+#: .\catalog\templates\catalog\book_list.html:4
+#, fuzzy
+#| msgid "Books:"
+msgid "Book list"
+msgstr "Book list"
+
+#: .\catalog\templates\catalog\book_list.html:14
 msgid "There are no books in the library."
+msgstr "There are no books in the library."
+
+#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:15
+#, fuzzy
+#| msgid "There are no books in the library."
+msgid "There are no books borrowed."
 msgstr "There are no books in the library."
 
 #: .\catalog\templates\index.html:4
@@ -160,4 +192,41 @@ msgstr "time"
 
 #: .\catalog\templates\index.html:14
 msgid "s"
-msgstr ""
+msgstr "s"
+
+#: .\catalog\templates\registration\logged_out.html:2
+msgid "Logged out!"
+msgstr "Logged out!"
+
+#: .\catalog\templates\registration\logged_out.html:3
+msgid "Click here to login again."
+msgstr "Click here to login again."
+
+#: .\catalog\templates\registration\login.html:5
+msgid "Your username and password didn\\"
+msgstr "Your username and password didn\\"
+
+#: .\catalog\templates\registration\login.html:14
+msgid "Please login to see this page."
+msgstr "Please login to see this page."
+
+#: .\catalog\templates\registration\login.html:36
+msgid "Lost password?"
+msgstr "Lost password?"
+
+#: .\catalog\templates\registration\password_reset_confirm.html:3
+msgid "Please enter (and confirm) your new password."
+msgstr "Please enter (and confirm) your new password."
+
+#: .\catalog\templates\registration\password_reset_confirm.html:10
+msgid "New password:"
+msgstr "New password:"
+
+#: .\catalog\templates\registration\password_reset_confirm.html:18
+msgid "Confirm password:"
+msgstr "Confirm password:"
+
+#: .\catalog\templates\registration\password_reset_confirm.html:30
+msgid "Password reset failed"
+msgstr "Password reset failed"
+
