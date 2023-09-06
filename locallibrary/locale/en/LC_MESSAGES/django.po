@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-05 15:13+0700\n"
+"POT-Creation-Date: 2023-09-06 14:29+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\catalog\models.py:13
+#: .\locallibrary\catalog\forms.py:10
+msgid "Enter a date between now and 4 weeks (default 3)."
+msgstr ""
+
+#: .\locallibrary\catalog\forms.py:16
+msgid "Invalid date - renewal in past"
+msgstr ""
+
+#: .\locallibrary\catalog\forms.py:20
+msgid "Invalid date - renewal more than 4 weeks ahead"
+msgstr ""
+
+#: .\locallibrary\catalog\models.py:11
 msgid "Enter a book genre (e.g. Science Fiction)"
 msgstr "Enter a book genre (e.g. Science Fiction)"
 
-#: .\catalog\models.py:25
+#: .\locallibrary\catalog\models.py:23
 msgid "Enter a brief description of the book"
 msgstr "Enter a brief description of the book"
 
-#: .\catalog\models.py:26
+#: .\locallibrary\catalog\models.py:24
 msgid ""
 "13 Characters <a href=\"https://www.isbn-international.org/content/what-isbn"
 "\">ISBN number</a>"
@@ -34,123 +46,148 @@ msgstr ""
 "13 Characters <a href=\"https://www.isbn-international.org/content/what-isbn"
 "\">ISBN number</a>"
 
-#: .\catalog\models.py:28
+#: .\locallibrary\catalog\models.py:26
 msgid "Select a genre for this book"
 msgstr "Select a genre for this book"
 
-#: .\catalog\models.py:47
+#: .\locallibrary\catalog\models.py:45
 msgid "Unique ID for this particular bookacross whole library"
 msgstr "Unique ID for this particular bookacross whole library"
 
-#: .\catalog\models.py:63
+#: .\locallibrary\catalog\models.py:61
 msgid "Book availability"
 msgstr "Book availability"
 
-#: .\catalog\templates\base_generic.html:6
+#: .\locallibrary\catalog\templates\base_generic.html:6
 msgid "Local Library"
 msgstr "Local Library"
 
-#: .\catalog\templates\base_generic.html:59
+#: .\locallibrary\catalog\templates\base_generic.html:53
 msgid "Home"
 msgstr "Home"
 
-#: .\catalog\templates\base_generic.html:62
+#: .\locallibrary\catalog\templates\base_generic.html:56
 msgid "All books"
 msgstr "All books"
 
-#: .\catalog\templates\base_generic.html:65
+#: .\locallibrary\catalog\templates\base_generic.html:59
 msgid "All authors"
 msgstr "All authors"
 
-#: .\catalog\templates\base_generic.html:68
+#: .\locallibrary\catalog\templates\base_generic.html:64
 msgid "User:"
 msgstr "User:"
 
-#: .\catalog\templates\base_generic.html:70
+#: .\locallibrary\catalog\templates\base_generic.html:66
 msgid "My Borrowed"
 msgstr "My Borrowed"
 
-#: .\catalog\templates\base_generic.html:74
+#: .\locallibrary\catalog\templates\base_generic.html:70
 msgid "Logout"
 msgstr "Logout"
 
-#: .\catalog\templates\base_generic.html:80
+#: .\locallibrary\catalog\templates\base_generic.html:76
 msgid "Login"
 msgstr "Login"
 
-#: .\catalog\templates\base_generic.html:93
+#: .\locallibrary\catalog\templates\base_generic.html:90
 msgid "previous"
 msgstr "previous"
 
-#: .\catalog\templates\base_generic.html:95
+#: .\locallibrary\catalog\templates\base_generic.html:92
 msgid "Page"
 msgstr "Page"
 
-#: .\catalog\templates\base_generic.html:95
+#: .\locallibrary\catalog\templates\base_generic.html:92
 msgid "of"
 msgstr "of"
 
-#: .\catalog\templates\base_generic.html:99
+#: .\locallibrary\catalog\templates\base_generic.html:96
 msgid "next"
 msgstr "next"
 
-#: .\catalog\templates\catalog\book_detail.html:4
+#: .\locallibrary\catalog\templates\catalog\author_form.html:7
+#: .\locallibrary\catalog\templates\catalog\book_renew_librarian.html:9
+msgid "Submit"
+msgstr "Submit"
+
+#: .\locallibrary\catalog\templates\catalog\authort_confirm_delete.html:2
+msgid "Delete Author"
+msgstr "Delete Author"
+
+#: .\locallibrary\catalog\templates\catalog\authort_confirm_delete.html:3
+msgid "Are you sure you want to delete the author:"
+msgstr "Are you sure you want to delete the author:"
+
+#: .\locallibrary\catalog\templates\catalog\authort_confirm_delete.html:5
+msgid "Yes, delete."
+msgstr "Yes, delete."
+
+#: .\locallibrary\catalog\templates\catalog\book_detail.html:4
 #, fuzzy
 #| msgid "Authors:"
 msgid "Author:"
 msgstr "Authors:"
 
-#: .\catalog\templates\catalog\book_detail.html:6
+#: .\locallibrary\catalog\templates\catalog\book_detail.html:6
 msgid "Summary:"
 msgstr "Summary"
 
-#: .\catalog\templates\catalog\book_detail.html:7
+#: .\locallibrary\catalog\templates\catalog\book_detail.html:7
 msgid "ISBN:"
 msgstr "ISBN"
 
-#: .\catalog\templates\catalog\book_detail.html:8
+#: .\locallibrary\catalog\templates\catalog\book_detail.html:8
 msgid "Language:"
 msgstr "Language"
 
-#: .\catalog\templates\catalog\book_detail.html:9
+#: .\locallibrary\catalog\templates\catalog\book_detail.html:9
 msgid "Genre:"
 msgstr "Genre"
 
-#: .\catalog\templates\catalog\book_detail.html:11
+#: .\locallibrary\catalog\templates\catalog\book_detail.html:11
 #, fuzzy
 #| msgid "Copies:"
 msgid "Copies"
 msgstr "Copies:"
 
-#: .\catalog\templates\catalog\book_detail.html:20
+#: .\locallibrary\catalog\templates\catalog\book_detail.html:20
 msgid "Due to be returned:"
 msgstr "Due to be returned:"
 
-#: .\catalog\templates\catalog\book_detail.html:22
+#: .\locallibrary\catalog\templates\catalog\book_detail.html:22
 msgid "Imprint:"
 msgstr "Imprint:"
 
-#: .\catalog\templates\catalog\book_list.html:4
-#, fuzzy
-#| msgid "Books:"
-msgid "Book list"
-msgstr "Book list"
-
-#: .\catalog\templates\catalog\book_list.html:14
+#: .\locallibrary\catalog\templates\catalog\book_list.html:12
 msgid "There are no books in the library."
 msgstr "There are no books in the library."
 
-#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:15
+#: .\locallibrary\catalog\templates\catalog\book_renew_librarian.html:4
+msgid "Renew:"
+msgstr "Renew:"
+
+#: .\locallibrary\catalog\templates\catalog\book_renew_librarian.html:5
+#, fuzzy
+#| msgid "My Borrowed"
+msgid "Borrower:"
+msgstr "My Borrowed"
+
+#: .\locallibrary\catalog\templates\catalog\book_renew_librarian.html:6
+msgid "Due date:"
+msgstr "Due date:"
+
+#: .\locallibrary\catalog\templates\catalog\bookinstance_list_borrowed_user.html:15
 #, fuzzy
 #| msgid "There are no books in the library."
 msgid "There are no books borrowed."
 msgstr "There are no books in the library."
 
-#: .\catalog\templates\index.html:4
+#: .\locallibrary\catalog\templates\index.html:4
 msgid "Local Library Home"
 msgstr "Local Library Home"
 
-#: .\catalog\templates\index.html:5
+#: .\locallibrary\catalog\templates\index.html:5
 msgid ""
 "Welcome to LocalLibrary, a website developed by <em>Mozilla Developer "
 "Network</em>!"
@@ -158,75 +195,79 @@ msgstr ""
 "Welcome to LocalLibrary, a website developed by <em>Mozilla Developer "
 "Network</em>"
 
-#: .\catalog\templates\index.html:6
+#: .\locallibrary\catalog\templates\index.html:6
 msgid "Dynamic content"
 msgstr "Dynamic content"
 
-#: .\catalog\templates\index.html:7
+#: .\locallibrary\catalog\templates\index.html:7
 msgid "The library has the following record counts:"
 msgstr "The library has the following record counts:"
 
-#: .\catalog\templates\index.html:9
+#: .\locallibrary\catalog\templates\index.html:9
 msgid "Books:"
 msgstr "Books:"
 
-#: .\catalog\templates\index.html:10
+#: .\locallibrary\catalog\templates\index.html:10
 msgid "Copies:"
 msgstr "Copies:"
 
-#: .\catalog\templates\index.html:11
+#: .\locallibrary\catalog\templates\index.html:11
 msgid "Copies available:"
 msgstr "Copies available:"
 
-#: .\catalog\templates\index.html:12
+#: .\locallibrary\catalog\templates\index.html:12
 msgid "Authors:"
 msgstr "Authors:"
 
-#: .\catalog\templates\index.html:14
+#: .\locallibrary\catalog\templates\index.html:14
 msgid "You have visited this page"
 msgstr "You have visited this page"
 
-#: .\catalog\templates\index.html:14
+#: .\locallibrary\catalog\templates\index.html:14
 msgid "time"
 msgstr "time"
 
-#: .\catalog\templates\index.html:14
+#: .\locallibrary\catalog\templates\index.html:14
 msgid "s"
 msgstr "s"
 
-#: .\catalog\templates\registration\logged_out.html:2
+#: .\locallibrary\catalog\templates\registration\logged_out.html:2
 msgid "Logged out!"
 msgstr "Logged out!"
 
-#: .\catalog\templates\registration\logged_out.html:3
+#: .\locallibrary\catalog\templates\registration\logged_out.html:3
 msgid "Click here to login again."
 msgstr "Click here to login again."
 
-#: .\catalog\templates\registration\login.html:5
+#: .\locallibrary\catalog\templates\registration\login.html:5
 msgid "Your username and password didn\\"
 msgstr "Your username and password didn\\"
 
-#: .\catalog\templates\registration\login.html:14
+#: .\locallibrary\catalog\templates\registration\login.html:14
 msgid "Please login to see this page."
 msgstr "Please login to see this page."
 
-#: .\catalog\templates\registration\login.html:36
+#: .\locallibrary\catalog\templates\registration\login.html:36
 msgid "Lost password?"
 msgstr "Lost password?"
 
-#: .\catalog\templates\registration\password_reset_confirm.html:3
+#: .\locallibrary\catalog\templates\registration\password_reset_confirm.html:3
 msgid "Please enter (and confirm) your new password."
 msgstr "Please enter (and confirm) your new password."
 
-#: .\catalog\templates\registration\password_reset_confirm.html:10
+#: .\locallibrary\catalog\templates\registration\password_reset_confirm.html:10
 msgid "New password:"
 msgstr "New password:"
 
-#: .\catalog\templates\registration\password_reset_confirm.html:18
+#: .\locallibrary\catalog\templates\registration\password_reset_confirm.html:18
 msgid "Confirm password:"
 msgstr "Confirm password:"
 
-#: .\catalog\templates\registration\password_reset_confirm.html:30
+#: .\locallibrary\catalog\templates\registration\password_reset_confirm.html:30
 msgid "Password reset failed"
 msgstr "Password reset failed"
 
+#, fuzzy
+#~| msgid "Books:"
+#~ msgid "Book list"
+#~ msgstr "Book list"
