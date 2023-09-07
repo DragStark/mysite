@@ -1,0 +1,18 @@
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.book-detail {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.flag-lang {
+  width: 35px;
+  height: 25px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
